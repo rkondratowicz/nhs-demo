@@ -31,6 +31,7 @@ const ReviewEntry: React.FC = () => {
           </SummaryList.Value>
         </SummaryList.Row>
       </SummaryList>
+      
       <div className="mt-5">
         <Button type="button">Approve</Button>
         <Button type="button" warning className="ml-1">
