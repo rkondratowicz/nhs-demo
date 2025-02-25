@@ -1,4 +1,5 @@
-import { Button, Table, Tag } from "nhsuk-react-components";
+import { Table, Tag, Select } from "nhsuk-react-components";
+import { useState } from "react";
 
 type TableRow = {
   id: string;
@@ -36,9 +37,27 @@ const tableData: TableRow[] = [
 ];
 
 function SomeTable() {
+  const [statusFilter, setStatusFilter] = useState<string>("");
+
+  const filteredData = statusFilter
+    ? tableData.filter(row => row.status === statusFilter)
+    : tableData;
+
   return (
     <>
       <h1>Letters</h1>
+      <Select
+        label="Filter by Status"
+        onChange={(e) => setStatusFilter(e.target.value)}
+        value={statusFilter}
+      >
+        <option value="">All</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+        <option value="awaiting approval">Awaiting Approval</option>
+        <option value="in print">In Print</option>
+        <option value="sent">Sent</option>
+      </Select>
       <Table>
         <Table.Head>
           <Table.Row>
@@ -50,7 +69,7 @@ function SomeTable() {
           </Table.Row>
         </Table.Head>
         <Table.Body>
-          {tableData.map((row, index) => (
+          {filteredData.map((row, index) => (
             <Table.Row key={index}>
               <Table.Cell><a href="/review-entry">{row.id}</a></Table.Cell>
               <Table.Cell>{row.batchId}</Table.Cell>
@@ -72,7 +91,6 @@ function SomeTable() {
           ))}
         </Table.Body>
       </Table>
-      <Button>Test NHSUK Button</Button>
     </>
   );
 }
