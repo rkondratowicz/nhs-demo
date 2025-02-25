@@ -7,28 +7,39 @@ const ReviewEntry: React.FC = () => {
       <SummaryList>
         <SummaryList.Row>
           <SummaryList.Key>Name</SummaryList.Key>
-          <SummaryList.Value>Sarah Philips</SummaryList.Value>
+          <SummaryList.Value>Alice Johnson</SummaryList.Value>
         </SummaryList.Row>
         <SummaryList.Row>
-          <SummaryList.Key>Date of birth</SummaryList.Key>
+          <SummaryList.Key>Date of Birth</SummaryList.Key>
           <SummaryList.Value>5 January 1978</SummaryList.Value>
         </SummaryList.Row>
         <SummaryList.Row>
-          <SummaryList.Key>Contact information</SummaryList.Key>
-          <SummaryList.Value>
-            72 Guild Street
-            <br />
-            London
-            <br />
-            SE23 6FH
-          </SummaryList.Value>
+          <SummaryList.Key>Pension</SummaryList.Key>
+          <SummaryList.Value>£5000</SummaryList.Value>
         </SummaryList.Row>
         <SummaryList.Row>
-          <SummaryList.Key>Contact details</SummaryList.Key>
-          <SummaryList.Value>
-            <BodyText>07700 900457</BodyText>
-            <BodyText>sarah.phillips@example.com</BodyText>
-          </SummaryList.Value>
+          <SummaryList.Key>Membership Number</SummaryList.Key>
+          <SummaryList.Value>12345678</SummaryList.Value>
+        </SummaryList.Row>
+        <SummaryList.Row>
+          <SummaryList.Key>Address Line 1</SummaryList.Key>
+          <SummaryList.Value>72 Guild Street</SummaryList.Value>
+        </SummaryList.Row>
+        <SummaryList.Row>
+          <SummaryList.Key>Address Line 2</SummaryList.Key>
+          <SummaryList.Value>London</SummaryList.Value>
+        </SummaryList.Row>
+        <SummaryList.Row>
+          <SummaryList.Key>Postcode</SummaryList.Key>
+          <SummaryList.Value>SE23 6FH</SummaryList.Value>
+        </SummaryList.Row>
+        <SummaryList.Row>
+          <SummaryList.Key>Legacy Scheme</SummaryList.Key>
+          <SummaryList.Value>Scheme A</SummaryList.Value>
+        </SummaryList.Row>
+        <SummaryList.Row>
+          <SummaryList.Key>Retirement Type</SummaryList.Key>
+          <SummaryList.Value>Early Retirement</SummaryList.Value>
         </SummaryList.Row>
       </SummaryList>
       

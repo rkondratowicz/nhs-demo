@@ -1,4 +1,4 @@
-import { Button, Table } from "nhsuk-react-components";
+import { Button, Table, Tag } from "nhsuk-react-components";
 
 type TableRow = {
   id: string;
@@ -55,7 +55,18 @@ function SomeTable() {
               <Table.Cell><a href="/review-entry">{row.id}</a></Table.Cell>
               <Table.Cell>{row.batchId}</Table.Cell>
               <Table.Cell>{row.pensionerName}</Table.Cell>
-              <Table.Cell>{row.status}</Table.Cell>
+              <Table.Cell>
+                <Tag color={
+                  row.status === "rejected" ? "red" :
+                  row.status === "awaiting approval" ? "yellow" :
+                  row.status === "approved" ? "green" :
+                  row.status === "in print" ? "aqua-green" :
+                  row.status === "sent" ? "blue" :
+                  "grey"
+                }>
+                  {row.status}
+                </Tag>
+              </Table.Cell>
               <Table.Cell>{row.lastUpdated}</Table.Cell>
             </Table.Row>
           ))}
