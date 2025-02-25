@@ -1,9 +1,11 @@
-import { BodyText, SummaryList, Button } from "nhsuk-react-components";
+import { SummaryList, Button } from "nhsuk-react-components";
 import React from "react";
 
 const ReviewEntry: React.FC = () => {
   return (
     <>
+      <h1>Letter A45GB</h1>
+      <Button type="button">Mark as reviewed</Button>
       <h3>Personal details</h3>
       <SummaryList>
         <SummaryList.Row>
@@ -52,13 +54,6 @@ const ReviewEntry: React.FC = () => {
           </SummaryList.Row>
         ))}
       </SummaryList>
-
-      <div className="mt-5">
-        <Button type="button">Approve</Button>
-        <Button type="button" warning className="ml-1">
-          Reject
-        </Button>
-      </div>
     </>
   );
 };
