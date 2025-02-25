@@ -3,14 +3,13 @@ import React from "react";
 
 const AppHeader: React.FC = () => {
   return (
-    <Header serviceName="Pension">
+    <Header serviceName="McCloud IC">
       <Header.Container>
         <Header.Logo href="/" />
         <Header.Search />
       </Header.Container>
       <Header.Nav>
         <Header.NavItem href="/">Home</Header.NavItem>
-        <Header.NavItem href="/upload-batch">Upload batch</Header.NavItem>
         <Header.NavItem href="/enter-data-manually">
           Enter data manually
         </Header.NavItem>
